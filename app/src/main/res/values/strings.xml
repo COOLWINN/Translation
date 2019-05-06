@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Translation</string>
+    <string name="translate">Translate</string>
+    <string name="stroke">Stroke\nOrder</string>
+    <string name="hint">Input text here</string>
+    <string name="listening">I am listening…</string>
+    <string name="hint_result">Translation result</string>
+    <string name="start">Start</string>
+    <string name="finish">Finish</string>
+    <string name="recognize">Recognize</string>
+</resources>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:background="@color/white">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_hollow">
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:hint="@string/hint"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/edit_cursor_color"
+            android:gravity="center"
+            android:layout_margin="4dp"
+            android:background="@color/white"/>
+
+        <Button
+            android:id="@+id/btn_translate"
+            android:background="@drawable/bg_solid"
+            android:text="@string/translate"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="translate"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_hollow">
+
+        <TextView
+            android:background="@color/white"
+            android:id="@+id/result_text"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:hint="@string/hint_result"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_margin="4dp" />
+
+        <Button
+            android:id="@+id/btn_stroke"
+            android:background="@drawable/bg_solid"
+            android:text="@string/stroke"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="displayStroke"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stroke_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:clipChildren="false"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="5dp"
+            android:clipChildren="false"
+            android:overScrollMode="never"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/speak_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_speak"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:src="@drawable/recorder_normal" />
+
+        <TextView
+            android:id="@+id/tv_speak"
+            android:text="@string/listening"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/btn_start"
+            android:background="@drawable/button_bg"
+            android:layout_height="70dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/start"
+            android:textSize="14sp"
+            android:textColor="@drawable/button_text"
+            android:layout_gravity="center_vertical"
+            android:onClick="startRecord" />
+
+        <Button
+            android:id="@+id/btn_finish"
+            android:background="@drawable/button_bg"
+            android:layout_height="70dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/finish"
+            android:textSize="14sp"
+            android:textColor="@drawable/button_text"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:onClick="stopRecord" />
+
+    </LinearLayout>
+
+</LinearLayout>
